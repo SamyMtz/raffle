@@ -1,27 +1,26 @@
-let cantidadBoletos = 54;
-let boletos = [...Array(cantidadBoletos).keys()].map((i) => i + 1);
-let no_comprados = [
+let ticketsQuantity = 54;
+let tickets = [...Array(ticketsQuantity).keys()].map((i) => i + 1);
+let disqualified = [
   25, 26, 27, 28, 29, 31, 32, 34, 35, 36, 38, 39, 42, 44, 45, 47, 49, 50, 51,
   52, 53, 54,
 ];
-let ganadores = [];
+let winners = [];
 
-// Función para obtener un número participante
-function generarNumeroGanador() {
-  // Verificar si todavía hay números participando
-  if (boletos.length > 0) {
-    let numero;
-    // Generar un número aleatorio
+// Generate a winning number
+function generateWinningNumber() {
+  // Check if there are still participating tickets
+  if (tickets.length > 0) {
+    let number;
+    // Get a random number and check if it's valid
     do {
-      numero = Math.floor(Math.random() * cantidadBoletos) + 1;
-      // Verificar si ese número participa
-    } while (no_comprados.includes(numero) || ganadores.includes(numero));
-    // Agregar el número generado a la lista de números ganadores
-    ganadores.push(numero);
-    // Mostrar el número ganador en el elemento con id "ganador"
-    document.getElementById("ganador").textContent = numero;
-    // Imprimir la lista de números no comprados en la consola
-    console.log(ganadores);
+      number = Math.floor(Math.random() * ticketsQuantity) + 1;
+    } while (disqualified.includes(number) || winners.includes(number));
+    // Add the number to the winning numbers list
+    winners.push(number);
+    // Show the winning number on the element with the "winner" id 
+    document.getElementById("winner").textContent = number;
+    // Print the winning numbers list in the console
+    console.log(winners);
   }
 }
 

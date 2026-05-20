@@ -2,13 +2,13 @@ body {
     margin: 0px;
 }
 
-.imagen {
+.image {
     background-image: url(../images/background.png);
     background-size: cover;
     z-index: 0;
 }
 
-.fondo {
+.background {
     z-index: 1;
     background-color: rgba(70, 51, 27, 0.5);
     height: 100vh;
@@ -19,7 +19,7 @@ body {
     align-items: center;
 }
 
-.numero {
+.number {
     background-color: white;
     border-radius: 5px;
     border-color: rgb(70, 51, 27);
@@ -32,7 +32,7 @@ body {
     width: 15rem;
 }
 
-.boton {
+.button {
     margin-top: 15px;
     background-color: white;
     font-size: large;
