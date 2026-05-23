@@ -7,15 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rifa</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/index.js" defer></script>
+    <script src="js/select.js" defer></script>
 </head>
 
 <body>
     <div class="image">
         <div class="background">
-            <label for="quantity">Ingrese el número de boletos participantes</label>
-            <input type="number" id="quantity" min="1" value="10">
-            <button id="getQuantity">Siguiente</button>
+            <p>Seleccione aquellos números no participantes</p>
+            <div id="selector"></div>
+            <button id="reset">Reiniciar</button>
+            <button id="getDisqualified">Siguiente</button>
         </div>
     </div>
 </body>
