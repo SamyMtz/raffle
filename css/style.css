@@ -1,45 +1,169 @@
+@import url(colors.css);
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 body {
-    margin: 0px;
+  margin: 0px;
+  font-family: "Hind Madurai", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
 }
 
 .image {
-    background-image: url(../images/background.png);
-    background-size: cover;
-    z-index: 0;
+  background-image: url(../images/background.png);
+  background-size: cover;
+  overflow: auto;
 }
 
 .background {
-    z-index: 1;
-    background-color: rgba(70, 51, 27, 0.5);
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-color: color-mix(in srgb, var(--background) 50%, transparent);
+  height: 100vh;
+  align-content: center;
+  justify-items: center;
+  overflow: auto;
 }
 
-.number {
-    background-color: white;
-    border-radius: 5px;
-    border-color: rgb(70, 51, 27);
-    border-style: outset;
-    padding: 20px;
-    font-weight: bold;
-    font-size: xx-large;
-    text-align: center;
-    height: 9.5rem;
-    width: 15rem;
+.container {
+  background-color: var(--surface);
+  color: var(--on-surface);
+  box-sizing: border-box;
+  padding: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: fit-content;
+  max-width: 80%;
+  border-radius: 1rem;
+  overflow: auto;
+}
+
+.container:has(> #selector) {
+  width: stretch;
+}
+
+input {
+  background-color: var(--surface-variant);
+  color: var(--on-surface-variant);
+  border: var(--outline);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.4rem;
+  width: stretch;
+  font-family: "Hind Madurai", sans-serif;
+  font-size: medium;
+}
+
+button {
+  font-family: "Hind Madurai", sans-serif;
+  font-size: medium;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0.75rem;
 }
 
 .button {
-    margin-top: 15px;
-    background-color: white;
-    font-size: large;
-    border-color: rgb(70, 51, 27);
-    border-radius: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 10px;
-    padding-left: 10px;
+  background-color: var(--primary);
+  color: var(--on-primary);
+  border: none;
+  float: right;
+  margin-right: auto;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: color-mix(in srgb, var(--on-primary) 8%, var(--primary));
+}
+
+.button:disabled {
+  background-color: var(--surface-variant);
+  color: var(--on-surface-variant);
+}
+
+#return {
+  background: none;
+  border: none;
+  color: var(--primary);
+  margin: auto;
+  transition-duration: 0.4s;
+}
+
+#return:hover {
+  background-color: color-mix(in srgb, var(--primary) 8%, transparent);
+}
+
+.icon {
+  width: 1rem;
+  vertical-align: -0.125rem;
+  fill: var(--primary);
+}
+
+#selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+}
+
+.option {
+  background-color: var(--surface-container);
+  color: var(--on-surface);
+  border: var(--outline);
+  border-width: 1px;
+  border-style: solid;
+  transition-duration: 0.4s;
+}
+
+.option:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--on-surface) 8%,
+    var(--surface-container)
+  );
+}
+
+.selected {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+  border: var(--secondary);
+  border-width: 1px;
+  border-style: solid;
+}
+
+.selected:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--on-secondary-container) 8%,
+    var(--secondary-container)
+  );
+}
+
+#reset {
+  background-color: var(--error-container);
+  color: var(--on-error-container);
+  border: none;
+  float: left;
+  margin-left: auto;
+  transition-duration: 0.4s;
+}
+
+#reset:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--on-error-container) 8%,
+    var(--error-container)
+  );
+}
+
+.number {
+  background-color: var(--surface-container);
+  border: none;
+  color: var(--on-surface);
+  border-radius: 1rem;
+  padding: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  height: 4rem;
 }

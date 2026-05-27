@@ -1,6 +1,7 @@
 // Creates a button for each ticket
 function createOption(value) {
   let option = document.createElement("button");
+  option.classList.add("option");
   option.textContent = value;
   // Adds event listener
   option.addEventListener("click", () => select(option));
@@ -54,6 +55,10 @@ tickets.forEach((value) => createOption(value));
 document.getElementById("selector").appendChild(fragment);
 
 // Adds event listeners
+document
+  .getElementById("return")
+  .addEventListener("click", () => window.location.assign("../index.html"));
+
 document.getElementById("reset").addEventListener("click", reset);
 
 document

@@ -1,0 +1,18 @@
+:root {
+  --primary: rgb(0, 103, 124);
+  --on-primary: rgb(255, 255, 255);
+  --secondary: rgb(75, 98, 105);
+  --on-secondary: rgb(255, 255, 255);
+  --secondary-container: rgb(206, 231, 239);
+  --on-secondary-container: rgb(52, 74, 81);
+  --surface: rgba(245, 250, 253);
+  --on-surface: rgb(23, 28, 30);
+  --surface-variant: rgb(219, 228, 232);
+  --on-surface-variant: rgb(64, 72, 75);
+  --surface-container: rgb(234, 239, 241);
+  --outline: rgb(112, 120, 124);
+  --background: rgb(245, 250, 253);
+  --on-background: rgb(23, 28, 30);
+  --error-container: rgb(255, 218, 214);
+  --on-error-container: rgb(147, 0, 10);
+}
