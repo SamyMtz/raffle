@@ -14,7 +14,11 @@ function generateWinningNumber() {
 // Gets stored tickets array
 let tickets = JSON.parse(sessionStorage.getItem("tickets"));
 
-// Adds event listener
+// Adds event listeners
+document
+  .getElementById("return")
+  .addEventListener("click", () => window.location.assign("../select.html"));
+
 document
   .getElementById("draw")
   .addEventListener("click", generateWinningNumber);

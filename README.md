@@ -14,7 +14,7 @@ Use the "Reiniciar" button to reset your selection and the "Regresar" button to 
 
 ![Screenshot of the configuration page](images/screenshots/raffle_02.png)
 
-You can then click the "Sortear" button to generate a new winning number until there are no more numbers.
+You can then click the "Sortear" button to generate a new winning number until there are no more numbers. Use the "Regresar" button to go back one page.
 
 ![Screenshot of the draw page](images/screenshots/raffle_03.png)
 
