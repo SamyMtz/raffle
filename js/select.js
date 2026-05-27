@@ -57,7 +57,7 @@ document.getElementById("selector").appendChild(fragment);
 // Adds event listeners
 document
   .getElementById("return")
-  .addEventListener("click", () => window.location.assign("../index.html"));
+  .addEventListener("click", () => window.history.back());
 
 document.getElementById("reset").addEventListener("click", reset);
 

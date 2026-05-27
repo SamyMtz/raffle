@@ -17,7 +17,7 @@ let tickets = JSON.parse(sessionStorage.getItem("tickets"));
 // Adds event listeners
 document
   .getElementById("return")
-  .addEventListener("click", () => window.location.assign("../select.html"));
+  .addEventListener("click", () => window.history.back());
 
 document
   .getElementById("draw")
